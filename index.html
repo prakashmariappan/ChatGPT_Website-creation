@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Shopping Website</title>
+    <style>
+        /* Styles for header */
+        header {
+            background-color: #f8c291;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            color: #fff;
+        }
+        
+        nav {
+            margin-top: 10px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        /* Styles for body */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .product {
+            width: 300px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        /* Styles for footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clothing Store</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="Product Image">
+            <h2>Product 1</h2>
+            <p>Description of Product 1</p>
+            <button class="add-to-cart" data-product="Product 1">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="Product Image">
+            <h2>Product 2</h2>
+            <p>Description of Product 2</p>
+            <button class="add-to-cart" data-product="Product 2">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="Product Image">
+            <h2>Product 3</h2>
+            <p>Description of Product 3</p>
+            <button class="add-to-cart" data-product="Product 3">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Clothing Store</p>
+    </footer>
+
+    <script>
+        // JavaScript functionality
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cart = document.getElementById('cart');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const product = button.getAttribute('data-product');
+                alert(`Added ${product} to cart!`);
+                // You can further implement adding the product to a shopping cart here
+            });
+        });
+    </script>
+</body>
+</html>
